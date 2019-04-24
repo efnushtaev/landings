@@ -1,0 +1,13 @@
+.modal {
+	
+display: none;
+
+
+}
+
+.modal--active {
+	display: block;
+	color: red;
+	opacity: 0;
+	transition: 5s;
+}
