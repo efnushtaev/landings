@@ -1,1 +1,1 @@
-# Web-Landings
+# Landings
