@@ -6,35 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tatoo-salon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="dist/styles/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./dist/styles/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="src/styles/modalWindow.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900|Montserrat:100,200,300,500,700,900"
         rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="header--top">
-            <a href="#" class="logo"><img src="img/AMZ-TATOO.png" alt="AMZ-TATOO"></a>
-            <nav class="nav" id="nav">
-                <a href="#" id="menu" class="icon">&#9776;</a>
+        <div class="header">
+            <a href="#" class="header__logo"><img src="./dist/img/AMZ-TATOO.png" alt="AMZ-TATOO"></a>
+            <nav class="header__nav" id="nav">
+                <a href="#" id="menu" class="header__nav__icon">&#9776;</a>
                 <a href="#">О нас</a>
                 <a href="#">Портфолио</a>
                 <a href="#">Этапы работы</a>
                 <a href="#">Команда</a>
                 <a href="#">Цены</a>
             </nav>
-            <div class="header--contact">
-                <div class="header--contact__mail">
+            <div class="header__contact">
+                <div class="header__contact__mail">
 
-                    <img src="img/email.png">
+                    <img src="./dist/img/email.png">
                     <p>Написать нам</p>
                 </div>
-                <div class="header--contact__phone">
-                    <img src="img/phone.png">
+                <div class="header__contact__phone">
+                    <img src="./dist/img/phone.png">
                     <p>+7(812)2299932</p>
                 </div>
             </div>
-            <div class="header--btn__block">
+            <div class="header__sign-up">
                 <input type="submit" value="Записаться на сеанс">
             </div>
 
@@ -42,63 +43,93 @@
     </header>
     <!------------------------------------------------------------------------------------------------->
     <main>
-        <div class="header--banner">
-            <img src="img/banner-1.jpg" alt="baner-1">
+        <div class="banner">
+            <img src="./dist/img/banner-1.jpg" alt="baner-1">
         </div>
         <section class="represent">
-            <h1 class="dark__h1">Почему выбирают нас</h1>
+            <h1 class="h1--dark">Почему выбирают нас</h1>
             <p>Все услуги нашей студии оказываются профессионалами<br>
                 и с помощью современного<br>
                 оборудования</p>
-            <div class="cards">
-                <div class="card__1">
-                    <p class="large_text">8920</p>
-                    <p class="about">татуировок сделали наши мастера</p>
-                    <div class="card--btn">
+            <div class="represent__cards">
+                <div class="represent__cards__card-1">
+                    <div class="modal">
+                        <div class="modal__inner">
+                            <h1>
+                                8920 татуировок сделали наши мастера
+                            </h1>
+                            <p id="modal__text">
+                                Aliquam placerat tincidunt ante, at condimentum nibh egestas ut. Fusce vitae enim nisl. In hac habitasse platea dictumst. Phasellus et consectetur quam. Duis tempus risus sapien, quis rhoncus elit laoreet ut. Donec auctor, ante in placerat porttitor, felis purus dictum quam, ut aliquam massa metus eget tellus. Vestibulum nisl enim, scelerisque et velit eget, suscipit malesuada erat.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text--large">8920</p>
+                    <p class="text--about">татуировок сделали наши мастера</p>
+                    <div class="btn--more modal-btn">
                         <a href="#">Подробнее</a>
                     </div>
                 </div>
-                <div class="card__2">
-                    <p class="large_text">12</p>
-                    <p class="about">мастеров высочайшего уровня</p>
-                    <div class="card--btn">
+                <div class="represent__cards__card-2">
+                        <div class="modal">
+                                <div class="modal__inner">
+                                    <h1>
+                                        12 мастеров высочайшего уровня
+                                    </h1>
+                                    <p id="modal__text">
+                                        Aliquam placerat tincidunt ante, at condimentum nibh egestas ut. Fusce vitae enim nisl. In hac habitasse platea dictumst. Phasellus et consectetur quam. Duis tempus risus sapien, quis rhoncus elit laoreet ut. Donec auctor, ante in placerat porttitor, felis purus dictum quam, ut aliquam massa metus eget tellus. Vestibulum nisl enim, scelerisque et velit eget, suscipit malesuada erat.
+                                    </p>
+                                </div>
+                            </div>
+                    <p class="text--large">12</p>
+                    <p class="text--about">мастеров высочайшего уровня</p>
+                    <div class="btn--more modal-btn">
                         <a href="#">Подробнее</a>
                     </div>
                 </div>
-                <div class="card__3">s
-                    <p class="large_text">100%</p>
-                    <p class="about">стерильность помещения и<br>
+                <div class="represent__cards__card-3">
+                        <div class="modal">
+                                <div class="modal__inner">
+                                    <h1>
+                                        100% стерильность помещения и оборудования
+                                    </h1>
+                                    <p id="modal__text">
+                                        Aliquam placerat tincidunt ante, at condimentum nibh egestas ut. Fusce vitae enim nisl. In hac habitasse platea dictumst. Phasellus et consectetur quam. Duis tempus risus sapien, quis rhoncus elit laoreet ut. Donec auctor, ante in placerat porttitor, felis purus dictum quam, ut aliquam massa metus eget tellus. Vestibulum nisl enim, scelerisque et velit eget, suscipit malesuada erat.
+                                    </p>
+                                </div>
+                            </div>
+                    <p class="text--large">100%</p>
+                    <p class="text--about">стерильность помещения и<br>
                         оборудования</p>
-                    <div class="card--btn">
+                    <div class="btn--more modal-btn">
                         <a href="#">Подробнее</a>
                     </div>
                 </div>
         </section>
         </div>
         <!------------------------------------------------------------------------------------------------->
-        <section class="our__works">
-            <h1 class="light__h1">Наши работы</h1>
+        <section class="our-works">
+            <h1 class="h1--light">Наши работы</h1>
             <p>Главная цель мастера - передать не только картинку,<br>
                 но и задумку, особенности<br>
                 и эмоции человека.</p>
-            <div class="works__gallery">
-                <img class="img" src="img/our_works/pic_1.jpg" alt="pic_1">
-                <img class="img" src="img/our_works/pic_2.jpg" alt="pic_1">
-                <img class="img" src="img/our_works/pic_3.jpg" alt="pic_1">
-                <img class="img" src="img/our_works/pic_4.jpg" alt="pic_1">
-                <img class="img" src="img/our_works/pic_5.jpg" alt="pic_1">
-                <img class="img" src="img/our_works/pic_6.jpg" alt="pic_1">
+            <div class="our-works__gallery">
+                <img class="img" src="./dist/img/pic_1.jpg" alt="pic_1">
+                <img class="img" src="./dist/img/pic_2.jpg" alt="pic_2">
+                <img class="img" src="./dist/img/pic_3.jpg" alt="pic_3">
+                <img class="img" src="./dist/img/pic_4.jpg" alt="pic_4">
+                <img class="img" src="./dist/img/pic_5.jpg" alt="pic_5">
+                <img class="img" src="./dist/img/pic_6.jpg" alt="pic_6">
             </div>
-            <div class="our__works--btn__block">
+            <div class="our-works__btn">
                 <input type="submit" value="Открыть галерею"><span></span>
             </div>
         </section>
         <!------------------------------------------------------------------------------------------------->
-        <section class="how__we__doit">
-            <h1 class="dark__h1">Как мы работаем</h1>
-            <div class="order__of__act">
-                <div class="first__act">
-                    <img src="img/1_ellips.png" alt="1_ellips">
+        <section class="how-we-doit">
+            <h1 class="h1--dark">Как мы работаем</h1>
+            <div class="how-we-doit__order">
+                <div class="how-we-doit__order__first-act">
+                    <img src="./dist/img/1_ellips.png" alt="1_ellips">
                     <h2>Заявка на сайте или по
                         телефону</h2>
                     <p>Мы воплотим любую вашу идею
@@ -106,8 +137,8 @@
                         Оставьте заявку и мы
                         перезвоним вам в течение 15 минут.</p>
                 </div>
-                <div class="second__act">
-                    <img src="img\2_ellips.png" alt="2_ellips">
+                <div class="how-we-doit__order__second-act">
+                    <img src="./dist/img/2_ellips.png" alt="2_ellips">
                     <h2>Заявка на сайте или по
                         телефону</h2>
                     <p>Мы воплотим любую вашу идею
@@ -115,8 +146,8 @@
                         Оставьте заявку и мы
                         перезвоним вам в течение 15 минут.</p>
                 </div>
-                <div class="third__act">
-                    <img src="img/3_ellips.png" alt="3_ellips">
+                <div class="how-we-doit__order__third-act">
+                    <img src="./dist/img/3_ellips.png" alt="3_ellips">
                     <h2>Заявка на сайте или по
                         телефону</h2>
                     <p>Мы воплотим любую вашу идею
@@ -127,48 +158,48 @@
             </div>
         </section>
         <!------------------------------------------------------------------------------------------------->
-        <section class="the__form">
+        <section class="purchase">
             <div class="wrapper">
-                <div class="the__form--contact">
-                    <div class="the__form--contact__block">
+                <form class="purchase__contact">
+                    <div class="purchase__contact__form">
                         <p>Ваше имя</p>
-                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Имя" name="name">
                     </div>
-                    <div class="the__form--contact__block">
+                    <div class="purchase__contact__form">
                         <p>Телефон</p>
-                        <input type="text" placeholder="+7(___)___-__-__">
+                        <input type="text" placeholder="+7(___)___-__-__" name="phone">
                     </div>
-                    <div class="the__form--btn__block">
+                    <div class="purchase__contact__btn">
                         <input type="submit" value="Записаться">
                     </div>
-                </div>
-                <p class="the__form--consent">Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+                </form>
+                <p class="purchase__consent">Нажимая на кнопку, вы даете согласие на обработку персональных данных и
                     соглашаетесь c политикой конфиденциальности.</p>
             </div>
         </section>
         <!------------------------------------------------------------------------------------------------->
-        <section class="our__team">
-            <h1 class="dark__h1">Наша команда</h1>
+        <section class="our-team">
+            <h1 class="h1--dark">Наша команда</h1>
             <p>Искусство предполагает чувства за творчеством, а татуировка несет<br>
                 эти чувства через всю жизнь. Именно поэтому татуировку можно<br>
                 назвать искусством в его чистом виде.</p>
-            <div class="our__team--all__people">
-                <div class="our__team--people">
-                    <img src="img/our__team__1.jpg" alt="our__team__1">
+            <div class="our-team__people">
+                <div class="our-team__people__person">
+                    <img src="./dist/img/our__team__1.jpg" alt="our__team__1">
                     <h2>Максим Харламов</h2>
                     <p>Макс специализируется на татуировках в стиле реализм, качественно и быстро исполняя масштабные
                         работы.</p>
                 </div>
-                <div class="our__team--people">
-                    <img src="img/our__team__2.jpg" alt="our__team__1">
+                <div class="our-team__people__person">
+                    <img src="./dist/img/our__team__2.jpg" alt="our__team__1">
                     <h2>Петр Герасимов</h2>
                     <p>Основная масса работ Петра -
                         это татуировки в стиле
                         black&gray, а также графика и
                         кавер-ап в реализме.</p>
                 </div>
-                <div class="our__team--people">
-                    <img src="img/our__team__3.jpg" alt="our__team__1">
+                <div class="our-team__people__person">
+                    <img src="./dist/img/our__team__3.jpg" alt="our__team__1">
                     <h2>Анна Ильина</h2>
                     <p>Анна - специалист пирсинга и
                         микродермала, имеющий
@@ -180,11 +211,11 @@
     </main>
     <footer>
         <div class="wrapper">
-            <a href="#" class="logo-down"><img src="img/AMZ-TATOO.png" alt="AMZ-TATOO"></a>
+            <a href="#" class="footer__logo"><img src="./dist/img/AMZ-TATOO.png" alt="AMZ-TATOO"></a>
             <p>Политика конфиденциальности</p>>
         </div>
     </footer>
-    <script src="dist/js/bundles.js"></script>
+    <script src="./dist/scripts/build.js"></script>
 </body>
 
 </html>

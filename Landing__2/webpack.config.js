@@ -22,15 +22,15 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: "file-loader",
         options: {
-          name: 'img/[name].[ext]',
+          name: './../img/[name].[ext]',
         },
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles/style.css')
+    new ExtractTextPlugin('./styles/style.css')
   ],
-
+  
   devtool: "source-map"
 };
 

@@ -12,7 +12,10 @@
 }
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900|Montserrat:100,200,300,500,700,900');
 
-
+#modal__text {
+    color: #000;
+    text-align: justify;
+}
 /*  BASIC SETTING  */
 
 * {
@@ -27,16 +30,16 @@ html{
 }
 body {
 }
-.dark__h1, .light__h1{
+.h1--dark, .h1--light{
     text-align: center;
     padding-top: 44px;
     font-size: var(--font-main-header);
     font-weight: 900;
 }   
-.dark__h1  {
+.h1--dark  {
     color: var(--color-secondary);
 }
-.light__h1{
+.h1--light{
     color: var(--color-white);
 }
 .wrapper {
@@ -52,17 +55,17 @@ main {
     width: 100%;
     margin: 0 auto;
 }
-.header--top {
+.header {
     width: 1220px;
     position: absolute;
     display: flex;
     flex-direction: row;
 }
-.logo {
+.header__logo {
     margin-top: 10px;
     margin-left: 30px;
 }
-.logo:after{
+.header__logo:after{
     /*  !!!!!!!!!!!!!!!!!!!!!!!!!!! исправить указатель */
     content: "";
     width: 2px;
@@ -71,7 +74,7 @@ main {
     position: absolute;
     left: 200px;
 }
-.nav {
+.header__nav {
     margin-left: 4%;
     margin-top: 20px;
     font-weight: 700;
@@ -84,16 +87,16 @@ nav a:not(#menu) {
 #nav a:hover {
     color: #d4d4d4;
 }
-.header--contact {
+.header__contact {
     margin-left: 3%;
 }
-.header--contact p {
+.header__contact p {
     position: relative;
     margin-left: 5px;
     bottom: 5px;
     display: inline-block;
 }
-.header--contact__mail, .header--contact__phone {
+.header__contact__mail, .header__contact__phone {
     display: inline-block;
     margin-top: 20px;
     margin-left: 15px;
@@ -101,15 +104,15 @@ nav a:not(#menu) {
     font-size: var(--font-main-text-card_btn);
     font-weight: 300;
 }
-.header--contact img {  
+.header__contact img {  
     display: inline-block;
 }
-.header--btn__block {
+.header__sign-up {
     float: right;
     margin-top: 14px;
     margin-left: 3%;
 }
-.header--btn__block input[type=submit] {
+.header__sign-up input[type=submit] {
     width: 165px;
     height: 35px;
     border-radius: 18px;
@@ -120,26 +123,26 @@ nav a:not(#menu) {
     font-weight: 700;
     font-size: var(--font-main-text-card_btn);
 }
-.header--btn__block input[type=submit]:hover{
+.header__sign-up input[type=submit]:hover{
     background: #e70000;
 }
 /*  MAIN  */
-.header--banner {
+.banner {
     max-width: 1220px;
     margin: 0 auto;
     width: 100%;
 }
-.header--banner img {
+.banner img {
     border-radius: 5px;
 }
-.represent p, .our__team p {
+.represent p, .our-team p {
     text-align: center;
     margin-top: 40px;
 
     font-size: 18px;
     color: var(--color-secondary);
 }
-.represent .cards {
+.represent .represent__cards {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-column-gap: 30px;
@@ -147,34 +150,34 @@ nav a:not(#menu) {
     justify-content: center;
 
 }
-.represent .card__1 {
+.represent .represent__cards__card-1 {
     position: relative;
     border-radius: 10px;
     height: 400px;
     width: 370px;
-    background: #0e0b12 url("img/card_1.jpg");
+    background: #0e0b12 url(./../img/card_1.jpg) 0px no-repeat;
     margin: 30px 0;
 }
-.represent .card__2 {
+.represent .represent__cards__card-2 {
     position: relative;
     border-radius: 10px;
     height: 400px;
     width: 370px;
-    background: #0e0b12 url("img/card_2.jpg");
+    background: #0e0b12 url(./../img/card_2.jpg) 0px no-repeat;
     margin: 30px 0;
 }
-.represent .card__3 {
+.represent .represent__cards__card-3 {
     position: relative;
     border-radius: 10px;
     height: 400px;
     width: 370px;
-    background: #0e0b12 url("img/card_3.jpg");
+    background: #0e0b12 url(./../img/card_3.jpg) 0px no-repeat;
     margin: 30px 0;
 }
-.represent .cards p {
+.represent .represent__cards p {
     color: var(--color-white);
 }
-.represent p.about {
+.represent p.text--about {
     position: relative;
     font-family: 'Montserrat', sans-serif;    
     font-weight: 300;
@@ -182,14 +185,14 @@ nav a:not(#menu) {
     margin: 0 auto;
     line-height: 20px;
 }
-.represent p.large_text {
+.represent p.text--large {
     font-family: 'Montserrat', sans-serif;
     margin-top: 70px;
     font-size: 55px;
     font-weight: 900;
     text-align: center
 }
-.represent p.large_text::after {
+.represent p.text--large::after {
     content: "";
     display: block;
     position: absolute;
@@ -199,7 +202,7 @@ nav a:not(#menu) {
     height: 2px;
     background: var(--color-white);
 }
-.represent .card--btn {
+.represent .btn--more {
     position: absolute;
     top: 300px;
     left: 105px;
@@ -209,11 +212,11 @@ nav a:not(#menu) {
     border-radius: 20px;
     cursor: pointer;
 }
-.card--btn:hover {
+.btn--more:hover {
     background: var(--color-btn-red);
     border: var(--color-btn-red) 1px solid;
 }
-.card--btn a {
+.btn--more a {
     position: absolute;
     color: var(--color-white);
     margin-top: 14px;
@@ -221,7 +224,7 @@ nav a:not(#menu) {
     font-size: var(--font-main-text-card_btn);
     font-weight: 900;
 }
-.icon {
+.header__nav__icon {
     display: none;
     position: relative;
     top: 19px;
@@ -229,25 +232,25 @@ nav a:not(#menu) {
     color: var(--color-white);
 }
 /*  OUR WORKS  */
-.our__works {
+.our-works {
     border-radius: 5px;
-    background: url("img/our_works_bg.png");
+    background: url("./../img/our_works_bg.png");
     width: 1220px;
     height: auto;
     margin: 0 auto;
 }
-.our__works p {
+.our-works p {
     text-align: center;
     font-size: var(--font-main-header);
 }
-.our__works p {
+.our-works p {
     margin-bottom: 50px;
     padding-top: 40px;
     color: var(--color-white);
     font-size: 16px;
     font-weight: 200; 
 }
-.our__works .works__gallery {
+.our-works .our-works__gallery {
     max-width: 1220px;
     margin: 0 auto;
     display: grid;
@@ -255,21 +258,21 @@ nav a:not(#menu) {
     grid-gap: 30px;
     justify-content: center;
 }
-.our__works img{
+.our-works img{
     cursor: pointer;
     border-radius: 10px;
 }
-.our__works img:hover{
+.our-works img:hover{
     opacity: 0.8;
 }
-.our__works--btn__block {
+.our-works__btn {
     position: relative;
     display: table;
     margin: 0 auto;
     padding-top: 60px;
     padding-bottom: 50px;
 }
-.our__works--btn__block input[type=submit] {
+.our-works__btn input[type=submit] {
     width: 300px;
     height: 60px;
     border-radius: 18px;
@@ -282,12 +285,12 @@ nav a:not(#menu) {
     transition: 0.2s;
     font-weight: 900;
 }
-.our__works--btn__block input[type=submit]:hover{
+.our-works__btn input[type=submit]:hover{
     background: var(--color-white);
     transition: 0.2s;
     color: var(--color-secondary);
 }
-.our__works--btn__block span {
+.our-works__btn span {
     position: absolute;
     display: block;
     top: 68px;
@@ -297,7 +300,7 @@ nav a:not(#menu) {
     height: 45px;
     width: 45px;
 }
-.our__works--btn__block span:after{
+.our-works__btn span:after{
     content: "";
     position: absolute;
     top: 17px;
@@ -307,7 +310,7 @@ nav a:not(#menu) {
     transform: rotate(45deg);
     background: var(--color-secondary);
 }
-.our__works--btn__block span:before{
+.our-works__btn span:before{
     content: "";
     position: absolute;
     top: 27px;
@@ -318,60 +321,60 @@ nav a:not(#menu) {
     background: var(--color-secondary);
 }
 /*  HOW__WE__DOIT  */
-.how__we__doit {
+.how-we-doit {
     max-width: 1220px;
     margin: 0 auto;
 }
-.order__of__act {
+.how-we-doit__order {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
     margin: 80px 90px;
 }
-.order__of__act div{
+.how-we-doit__order div{
     width: 300px;
 }
-.order__of__act img{
+.how-we-doit__order img{
     position: relative;
     display: block;
     margin-bottom: 40px;
 }
-.order__of__act h2{
+.how-we-doit__order h2{
     margin-bottom: 40px;
     font-weight: 900;
 }
 /*  THE__FORM  */
-.the__form {
+.purchase {
     border-radius: 5px;
     max-width: 1220px;
     margin: 0 auto;
-    background: url("img/our_works_bg.png");
+    background: url("./../img/our_works_bg.png");
 }
-.the__form--consent {
+.purchase__consent {
     color: var(--color-white);
     font-size: 13px;
     font-weight: 300;
     padding: 30px 0;
     text-align: center;
 }
-.the__form--contact {
+.purchase__contact {
     display: flex;
     align-content: center;
     justify-content: space-between;
     color: var(--color-white);
 }
-.the__form--contact__block {
+.purchase__contact__form {
     display: block;
     margin-top: 45px;
 }
-.the__form--contact__block p {
+.purchase__contact__form p {
     margin-bottom: 10px;
     padding-left: 10px;
     font-size: 18px;
     font-weight: 300;
 }
-.the__form--contact__block input[type=text]{
+.purchase__contact__form input[type=text]{
     width: 300px;
     height: 50px;
     border: 0px;
@@ -381,14 +384,14 @@ nav a:not(#menu) {
     font-size: 16px;
     color: var(--color-secondary);
 }
-.the__form--contact__block input::placeholder {
+.purchase__contact__form input::placeholder {
     color: darkgrey;
 }
-.the__form--btn__block {
+.purchase__contact__btn {
     display: block;
     
 }
-.the__form--btn__block input[type=submit] {
+.purchase__contact__btn input[type=submit] {
     margin-top: 77px;
     margin-left: 10px;
     width: 165px;
@@ -401,15 +404,15 @@ nav a:not(#menu) {
     font-weight: 700;
     font-size: 14px;
 }
-.the__form--btn__block input[type=submit]:hover{
+.purchase__contact__btn input[type=submit]:hover{
     background: #e70000;
 }
 /*  OUR__TEAM  */
-.our__team{
+.our-team{
     width: 1220px;
     margin: 0 auto;
 }
-.our__team--all__people {
+.our-team__people {
     padding: 40px 0;
     position: relative;
     display: grid;
@@ -420,14 +423,14 @@ nav a:not(#menu) {
     flex-wrap: wrap;
     gap: 30px;
 }
-.our__team--people img {
+.our-team__people__person img {
     border-radius: 10px;
 }
-.our__team--people > h2 {
+.our-team__people__person > h2 {
     font-weight: 900;
     margin-top: 50px;
 }
-.our__team--people > h2 + p {
+.our-team__people__person > h2 + p {
     text-align: left;
     width: 300px;
 }
@@ -443,7 +446,7 @@ footer p {
     text-align: center;
     bottom: 3px;
 }
-footer .logo-down {
+footer .footer__logo {
     position: relative;
     top: 30px;
     left: 30px;
@@ -453,99 +456,96 @@ footer .logo-down {
 
 
 
-
-
-
 @media screen and (max-width: 1200px) {
 
-    .icon {
+    .header__nav__icon {
         display: block;
         margin-right: 50px;
     }
-    .logo:after {
+    .header__logo:after {
         display: none;
     }
     header, main {
         width: 100%;
     }
-    .header--banner, .header--top {
+    .banner, .header {
         position: relative;
         top: 0;
         height: auto;
         width: 100%;
         background: var(--color-secondary);
     }
-    .represent .cards {
+    .represent .represent__cards {
         grid-template-columns: 370px;
     }
-    .nav a {
+    .header__nav a {
         display: none;
     }
-    .nav.responsive a{
+    .header__nav.responsive a{
         display: block;   
     }
-    .nav.responsive a:not(#menu){
+    .header__nav.responsive a:not(#menu){
         position: relative;
         left: 40px;
         top: -10px;
         padding: 5px 0;
     }
-    .nav a.icon{
+    .header__nav a.header__nav__icon{
         position: absolute;
         display: block;  
     }
-    .header--banner img {
+    .banner img {
         display: none;
     }
-    .header--contact__mail, .header--contact__phone {
+    .header__contact__mail, .header__contact__phone {
         display: block;
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .header--contact {
+    .header__contact {
         margin-left: auto;
         margin-right: 0;
         display: block;
     }
-    .header--btn__block {
+    .header__sign-up {
         display: block;
         margin-right: 2%;
         margin-left: 3%;
         margin-top: 20px;
     }
-    .logo {
+    .header__logo {
         margin-top: 16px;      
     }
-    .our__works, .our__team, .how__we__doit{
+    .our-works, .our-team, .how-we-doit{
         width: 100%;
     }
-    .order__of__act {
+    .how-we-doit__order {
        flex-direction: column;
        margin: 80px auto;
     }
-    .order__of__act div{
+    .how-we-doit__order div{
         width: 50%;
         margin: 60px auto;
     }
-    .the__form {
+    .purchase {
         width: 100%;
     }
-    .the__form--contact {
+    .purchase__contact {
         
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .the__form--btn__block {
+    .purchase__contact__btn {
         display: block;
         margin: 0 30%;   
     }
-    .our__team--all__people {
+    .our-team__people {
         padding: 40px 30%;
     }
-    .our__team--all__people {
+    .our-team__people {
         grid-template-columns: 370px;
     }
-    footer .logo-down {
+    footer .footer__logo {
         left: -50px;
     }
 }
@@ -553,14 +553,14 @@ footer .logo-down {
     .wrapper {
         width: 670px;
     }
-    .header--top {
+    .header {
         width: 670px; 
     }
-    .the__form--consent {
+    .purchase__consent {
         padding: 30px 30px;
         justify-content: space-around;
     }
-    .nav.responsive a:not(#menu){
+    .header__nav.responsive a:not(#menu){
         left: -120px;
         top: 50px;
     }
@@ -570,7 +570,7 @@ footer .logo-down {
     nav {
         margin-bottom: 70px;
     }
-    footer .logo-down {
+    footer .footer__logo {
         left: 30px;
     }
 }

@@ -1,0 +1,84 @@
+.modal {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10000;
+}
+.modal--active {
+	display: block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10000;
+}
+
+.modal__layout {
+	display: block;
+	left: 0px;
+	top: 0px;
+	background: #000;
+	opacity: 0.8;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	transition: 0.3s;
+}
+.modal__layout--active {
+	display: block;
+	left: 0px;
+	top: 0px;
+	background: #000;
+	opacity: 0.8;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	transition: opacity 0.8s;
+}
+
+.modal__inner {
+	position: fixed;
+	opacity: 0;
+	top: 0px;
+	width: auto;
+	height: auto;
+	margin: 100px 50px;
+	padding: 50px;
+	background: #fff;
+	border-radius: 10px;
+	transition: opacity 0.3s;
+	z-index: 10001;
+}
+.modal__inner--active {
+	position: fixed;
+	opacity: 1;
+	top: 0px;
+	width: auto;
+	height: auto;
+	margin: 100px 50px;
+	padding: 50px;
+	background: #fff;
+	border-radius: 10px;
+	transition: opacity 0.8s;
+	z-index: 10001;
+}
+
+.modal__close {
+	border-radius: 50%;
+	margin: 20px;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: rgb(255, 0, 0);
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 150%;
+	cursor: pointer;
+}
