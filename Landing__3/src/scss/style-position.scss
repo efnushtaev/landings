@@ -1,0 +1,46 @@
+.wrapper {
+    display: table;
+    margin: 0px auto;
+    width: 1200px - 30px;
+    // background: red;
+}
+
+.__navig {
+    margin-top: 40px;
+}
+
+
+.__about {
+margin: 100px auto 100px auto;
+
+}
+
+.__scill {
+    margin: 160px auto 100px auto;
+}
+.__video {
+    margin: 100px 0;
+}
+.__services {
+    margin: 55px auto;
+}
+.__testimonials {
+    margin: 0 auto 0 auto;
+    padding: 160px 0 60px 0;
+}
+.__order {
+    margin: 100px auto;
+}
+.__footer{
+    margin: 100px auto 40px auto;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 100%;
+    }
+
+}
