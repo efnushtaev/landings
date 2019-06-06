@@ -4,6 +4,7 @@
 
 * Adaptive/responsive design
 * HTML, CSS, JS
+* Webpack
 
 ---
 
