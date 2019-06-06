@@ -1,12 +1,9 @@
 # My company
-#### Прототип простого лендинга выполненный по PSD макету
 
 ---
 
-##### HTML, CSS
-
 * Adaptive/responsive design
-* Настроенные формы отправки
+* HTML, CSS, JS
 
 ---
 
