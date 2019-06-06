@@ -6,33 +6,42 @@
 }
 
 .__navig {
-    margin-top: 40px;
+    box-sizing: border-box;
+    padding-top: 40px;
 }
 
 
 .__about {
-margin: 100px auto 100px auto;
+    margin: 100px auto 100px auto;
 
 }
 
 .__scill {
     margin: 160px auto 100px auto;
 }
+
 .__video {
     margin: 100px 0;
 }
+
 .__services {
     margin: 55px auto;
 }
+
 .__testimonials {
     margin: 0 auto 0 auto;
     padding: 160px 0 60px 0;
 }
+
 .__order {
     margin: 100px auto;
 }
-.__footer{
+
+.__footer {
     margin: 100px auto 40px auto;
+}
+.__banner{
+    margin-top: 180px;
 }
 
 
@@ -43,4 +52,19 @@ margin: 100px auto 100px auto;
         width: 100%;
     }
 
+}
+
+@media screen and (max-width: 1200px) {
+    .__navig {
+        padding: 40px 20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .__navig {
+        padding: 40px 20px 0 20px;
+    }
+    .__banner {
+        margin-top: 100px;
+    }
 }

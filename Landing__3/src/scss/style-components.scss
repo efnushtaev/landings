@@ -88,9 +88,6 @@
     font-weight: 500;
 }
 
-
-
-
 .sect {
     height: auto;
     width: auto;
@@ -100,7 +97,9 @@
     }
 
     &-header {
-        background: $color__bg-main;
+        background: $color__bg-main url(./../img/bg__banner.png) no-repeat;
+        background-size: cover;
+        height: auto;
     }
 
     &-about {
@@ -108,17 +107,9 @@
     }
 
     &-scills {
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e0e0e0+50,b5b5b5+50 */
-        background: #e0e0e0;
-        /* Old browsers */
-        background: -moz-linear-gradient(left, #e0e0e0 50%, #b5b5b5 50%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, #e0e0e0 50%, #b5b5b5 50%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, #e0e0e0 50%, #b5b5b5 50%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e0e0', endColorstr='#b5b5b5', GradientType=1);
-        /* IE6-9 */
+        background: $color__bg-main url(./../img/bg__scills.png) no-repeat;
+        background-size: cover;
+        height: auto;
     }
 
     &-numbers {
@@ -150,21 +141,71 @@
 // ---------------------------------------------------------------
 
 .navig {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
 
     &__logo {
+        position: relative;
+        top: -3px;
+        display: inline-block;
+        width: auto;
+        height: 25px;
         flex: 1 3 46.25%;
     }
 
+    &__burger {
+        cursor: pointer;
+        visibility: hidden;
+        height: 30px;
+
+        &-inner {
+            position: relative;
+            height: 2px;
+            width: 35px;
+            background: $color-font--dark;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 16px;
+                height: 2px;
+                width: 100%;
+                background: $color-font--dark;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                height: 2px;
+                width: 100%;
+                background: $color-font--dark;
+            }
+        }
+    }
+
     &__menu {
+        height: 100%;
+        position: relative;
+        display: inline-block;
         @extend %font-subheader--dark;
         flex: 3 1 53.75%;
         justify-content: space-between;
         display: flex;
+        opacity: 1;
+        transform: scaleY(1);
+
+        &--visible {
+
+            opacity: 1;
+            transform: scaleY(1);
+            transition: 0s;
+        }
 
         &-list {
+            height: auto;
             display: inline-block;
             padding: 0 10px;
 
@@ -181,7 +222,7 @@
 }
 
 .banner {
-    margin-top: 180px;
+    position: relative;
     margin-bottom: 200px;
     width: auto;
     height: auto;
@@ -266,30 +307,37 @@
         width: 45.67%;
         height: 3px;
         background: $color__bg-alt;
-    }
 
-    &__graph:after {
-        content: '';
-        position: absolute;
-        width: 0px;
-        height: 3px;
-        background: $color__main;
-        transition: 1000ms;
-    }
+        &-fill {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform-origin: 0% 0%;
+            height: 3px;
+            background: $color__main;
+            transform: scaleX(0);
 
-    &__graph:nth-of-type(1):hover:after {
-        width: 55%;
-        transition: 1000ms;
-    }
+            &--visible {
 
-    &__graph:nth-of-type(2):hover:after {
-        width: 75%;
-        transition: 1000ms;
-    }
+                transform: scaleX(1);
+                transition: 1000ms;
+            }
+        }
 
-    &__graph:nth-of-type(3):hover:after {
-        width: 35%;
-        transition: 1000ms;
+        &:nth-of-type(1) .scill__graph-fill {
+            width: 55%;
+            transition: 1000ms;
+        }
+
+        &:nth-of-type(2) .scill__graph-fill {
+            width: 75%;
+            transition: 1000ms;
+        }
+
+        &:nth-of-type(3) .scill__graph-fill {
+            width: 35%;
+            transition: 1000ms;
+        }
     }
 }
 
@@ -297,10 +345,11 @@
 // ---------------------------------------------------------------
 
 .numbers {
-    display: flex;
+    display: grid;
     justify-content: space-evenly;
+    justify-items: center;
     margin-bottom: 95px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    grid-template-columns: repeat(4, 1fr);
 
     &__element {
         padding: 95px 20px 0 0;
@@ -326,31 +375,36 @@
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
 
+#work-collapse {
+    display: none;
+}
 
 .work {
-    height: auto;
+    height: 100%;
 
     &__open,
     &__collapse {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         height: auto;
+        width: 100%;
 
         &>div {
             position: relative;
             overflow: hidden;
-            width: 100%;
-            height: 300px;
-            background: #b5b5b5;
+            margin-bottom: -10px;
+            height: auto;
+
 
             &:after {
                 content: '';
                 cursor: pointer;
                 position: absolute;
                 left: 0px;
+                top: -10px;
                 opacity: 0;
-                background: #000 url(./../img/star.png) 50% no-repeat;
+                background: #000 url(./../img/eye.png) 50% no-repeat;
                 width: 100%;
                 height: 100%;
                 z-index: 100;
@@ -359,7 +413,7 @@
             }
 
             &:hover:after {
-                opacity: 0.7;
+                opacity: 0.82;
                 transition: 0.3s;
             }
 
@@ -367,6 +421,7 @@
                 position: relative;
                 width: 100%;
                 height: auto;
+                overflow: hidden;
 
             }
         }
@@ -374,6 +429,7 @@
 
     &__btn {
         @extend %font-alt__loadmore--dark;
+        position: relative;
         cursor: pointer;
         height: 100px;
         width: 100%;
@@ -388,7 +444,6 @@
             transition: 0.3s;
         }
     }
-
 }
 
 // ---------------------------------------------------------------
@@ -397,6 +452,40 @@
 .video {
     width: 100%;
     height: auto;
+
+    &__container {
+        position: relative;
+        cursor: pointer;
+
+
+        &:hover .video__cover {
+
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+
+    &__control {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto auto;
+        left: 0px;
+        right: 0px;
+    }
+
+    &__cover {
+        width: 100%;
+        height: calc(100% - 5px);
+
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+
+        opacity: 0;
+        transition: 0.3s;
+    }
 
     &__header {
         @extend %font-header;
@@ -460,6 +549,14 @@
 .testimonials {
     width: 67.5%;
 
+    & .mySlides {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
     &__slide {
 
         &>p:nth-of-type(1) {
@@ -482,6 +579,12 @@
         align-items: baseline;
         width: auto;
 
+        & .active {
+            transform: scale(1.5);
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+
         &>span {
             cursor: pointer;
             margin: 0 5px;
@@ -489,13 +592,13 @@
             background: white;
             height: 6px;
             width: 6px;
-            opacity: 0.7;
+            opacity: 0.6;
 
         }
 
         &>span:hover {
             transform: scale(1.5);
-            opacity: 1;
+
 
         }
     }
@@ -549,7 +652,7 @@
             box-sizing: border-box;
             padding: 10px;
             margin-bottom: 30px;
-            
+
             &:focus {
                 background: rgb(253, 196, 196);
             }
@@ -668,44 +771,207 @@
 }
 
 
-
-
-
-
-@for $i from 1 through 10 {
-    .work__open>div:nth-of-type(#{$i}) {
-        background-color: darken(rgb(201, 201, 201), 4% * $i);
-    }
-}
-
-@for $i from 1 through 10 {
-    .work__collapse>div:nth-of-type(#{$i}) {
-        background-color: darken(rgb(201, 201, 201), 4% * $i);
-    }
-}
-
-
-
-
-
-
 @media screen and (max-width: 1200px) {
+    .scill {
+        padding-left: 20px;
+
+        &__graph {
+            width: 600px;
+        }
+    }
 
     .work {
 
         &__open,
         &__collapse {
             grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            &>div {
+                height: 240px;
+                margin-bottom: 0px;
+
+                &:after {
+                    top: 0px;
+                }
+            }
         }
     }
 
     .footer {
         padding: 0 20px;
     }
-    .navig {
 
+    .banner {
+        &__p {
+            position: relative;
+            left: -20px;
+            margin-top: 30px;
+            background: rgba($color__bg-main, 0.65);
+            padding: 40px;
+        }
+
+        &__h1 {
+            padding: 0 10px;
+        }
     }
 }
 
-@media screen and (max-width: 900px) {}
+@media screen and (max-width: 900px) {
+    .scill {
+        &__graph {
+            width: 73%;
+        }
+    }
+
+
+    .order {
+        &__form {
+            width: 90%;
+            margin: 0 5%;
+
+            & form>input:nth-of-type(1) {
+                width: 100%;
+
+            }
+
+            & form>input:nth-of-type(2) {
+                width: 100%;
+
+            }
+        }
+    }
+
+    .footer {
+        grid-template-columns: repeat(4, 1fr);
+
+        &>div {
+            padding: 0 10px;
+        }
+    }
+
+    .numbers {
+        padding: 0 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, minmax(200px, 2fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sect {
+        &-header {
+            height: 900px;
+        }
+    }
+
+    .scill {
+        &__header {
+            margin-right: 0px;
+        }
+
+        &__graph {
+            width: 90%;
+        }
+    }
+
+    .banner {
+        transition: 0.6s;
+
+        &--visible {
+
+            transform: translateY(-180px);
+            transition: 0.6s;
+        }
+
+        &__h1 {
+            margin-left: 20%;
+        }
+
+        &__p {
+            left: -30px;
+            margin-left: 20%;
+
+        }
+
+        &__button {
+            margin-left: 30%;
+        }
+    }
+
+    .navig {
+        justify-content: start;
+
+        &__logo {
+            flex: 0 0 0;
+        }
+
+        &__burger {
+            visibility: visible;
+            margin: 0 20px;
+
+            &-inner {}
+        }
+
+        &__menu {
+            top: -9px;
+            transition: 0.5s;
+
+            &--visible {
+                opacity: 1;
+                transform: scaleY(1);
+                transition: 0.4s;
+                height: 100%;
+
+            }
+
+            transform: scaleY(0.05);
+            flex-direction: column;
+            opacity: 0;
+            transform-origin: 0% 0%;
+            transition: opacity 0.4s,
+            transform 0.4s;
+
+            &-list {
+                display: block;
+                padding: 4px 0;
+                font-size: 150%;
+            }
+        }
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: repeat(2, 1fr);
+
+        &>div {
+            padding: 0 10px;
+        }
+    }
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .1
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .1
+    }
+
+    to {
+        opacity: 1
+    }
+}

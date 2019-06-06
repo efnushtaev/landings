@@ -7,11 +7,13 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: "scripts/build.js",
     library: "home"
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -22,7 +24,8 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: "file-loader",
         options: {
-          name: './../img/[name].[ext]',
+          name: '[name].[ext]',
+          outputPath: './../dist/img/',
         },
       }
     ]

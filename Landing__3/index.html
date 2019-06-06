@@ -10,14 +10,14 @@
 </head>
 
 <body>
-
-    <!-- --------------------------------------------------------------    -->
-
     <article id='home' class='sect sect-header'>
         <div class='wrapper'>
             <div class='navig __navig'>
-                <div class='navig__logo'>logo</div>
-                <ul class='navig__menu'>
+                <div class='navig__logo'><a href='#home'><img src="./dist/img/logo.png" alt="logo.png"></a></div>
+                <div id='burger' class="navig__burger">
+                    <div class="navig__burger-inner"></div>
+                </div>
+                <ul id='menu' class='navig__menu navig__menu--visible'>
                     <li class='navig__menu-list'><a href='#home'>HOME</a></li>
                     <li class='navig__menu-list'><a href='#about'>ABOUT</a></li>
                     <li class='navig__menu-list'><a href='#work'>WORK</a></li>
@@ -35,13 +35,9 @@
                 <button class='banner__button'>
                     CONTACT US
                 </button>
-
             </div>
         </div>
     </article>
-
-    <!-- --------------------------------------------------------------    -->
-
     <article id='about' class='sect sect-about'>
         <div class='wrapper'>
             <div class='about __about'>
@@ -57,26 +53,25 @@
             </div>
         </div>
     </article>
-
-    <!-- --------------------------------------------------------------    -->
-
     <article class='sect-scills'>
         <div class='wrapper'>
             <div class='scill __scill'>
                 <p class='scill__header'>Professional Scills</p>
                 <p class='scill__subheader'>UI/UX DESIGN<span>55%</span></p>
-                <div class='scill__graph'></div>
+                <div class='scill__graph'>
+                    <div class="scill__graph-fill"></div>
+                </div>
                 <p class='scill__subheader'>WEB DEVELOPMENT<span>75%</span></p>
-                <div class='scill__graph'></div>
+                <div class='scill__graph'>
+                    <div class="scill__graph-fill"></div>
+                </div>
                 <p class='scill__subheader'>MARKETING<span>35%</span></p>
-                <div class='scill__graph'></div>
+                <div class='scill__graph'>
+                    <div class="scill__graph-fill"></div>
+                </div>
             </div>
-
         </div>
     </article>
-
-    <!-- --------------------------------------------------------------    -->
-
     <article class='sect sect-numbers'>
         <div class='wrapper'>
             <div class='numbers'>
@@ -119,56 +114,67 @@
             </div>
         </div>
     </article>
-
-    <!-- --------------------------------------------------------------    -->
-
     <article id='work' class='sect sect-works'>
-
         <div class='work'>
-
             <div class='work__open'>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
-                <div><img src="./dist/img/johan.jpg" alt="johan.jpg"></div>
+                <div><img src="./dist/img/work__1.png" alt="work__1"></div>
+                <div><img src="./dist/img/work__2.png" alt="work__2"></div>
+                <div><img src="./dist/img/work__3.png" alt="work__3"></div>
+                <div><img src="./dist/img/work__4.png" alt="work__4"></div>
+                <div><img src="./dist/img/work__5.png" alt="work__5"></div>
+                <div><img src="./dist/img/work__6.png" alt="work__6"></div>
+                <div><img src="./dist/img/work__7.png" alt="work__7"></div>
+                <div><img src="./dist/img/work__1.png" alt="work__1"></div>
             </div>
-            <button class='work__btn'>LOAD MORE WORKS</button>
-            <!-- <div class='work__collapse'>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
-            </div> -->
-
+            <div id='work-collapse'>
+                <div class='work__collapse'>
+                    <div><img src="./dist/img/work__1.png" alt="work__1"></div>
+                    <div><img src="./dist/img/work__2.png" alt="work__2"></div>
+                    <div><img src="./dist/img/work__3.png" alt="work__3"></div>
+                    <div><img src="./dist/img/work__4.png" alt="work__4"></div>
+                    <div><img src="./dist/img/work__5.png" alt="work__5"></div>
+                    <div><img src="./dist/img/work__6.png" alt="work__6"></div>
+                    <div><img src="./dist/img/work__7.png" alt="work__7"></div>
+                    <div><img src="./dist/img/work__1.png" alt="work__1"></div>
+                    <div><img src="./dist/img/work__1.png" alt="work__1"></div>
+                    <div><img src="./dist/img/work__2.png" alt="work__2"></div>
+                    <div><img src="./dist/img/work__3.png" alt="work__3"></div>
+                    <div><img src="./dist/img/work__4.png" alt="work__4"></div>
+                    <div><img src="./dist/img/work__5.png" alt="work__5"></div>
+                    <div><img src="./dist/img/work__6.png" alt="work__6"></div>
+                    <div><img src="./dist/img/work__7.png" alt="work__7"></div>
+                    <div><img src="./dist/img/work__1.png" alt="work__1"></div>
+                </div>
+            </div>
+            <button id='work-collapse-btn' class='work__btn'>LOAD MORE WORKS</button>
+        </div>
     </article>
-
-    <!-- -------------------------------------------------------------    -->
-
     <article class='sect sect-video'>
         <div class='wrapper'>
             <div class='video __video'>
                 <p class='video__header'>Our Work Proccess</p>
                 <p class='video__p'>Was years it seasons was there form he in in them together over that,<br>
                     third sixth gathered female creeping bearing behold years.</p>
-                <video class='video__inner' controls loop autoplay preload muted>
-                    <source src='./src/assets/Pexels Videos 1674470.mp4'>
-                    </source>
-                </video>
+                <div id='videoControl' class="video__container">
+                    <div class="video__cover">
+                        <span class='video__control'><svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="50" fill="#10c9c3" />
+                                <path
+                                    d="M61.8667 48.4C62.9333 49.2 62.9333 50.8 61.8667 51.6L47.2 62.6C45.8815 63.5889 44 62.6481 44 61L44 39C44 37.3519 45.8815 36.4111 47.2 37.4L61.8667 48.4Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                    </div>
+                    <video class='video__inner' loop autoplay preload muted>
+                        <source src='./src/assets/Pexels Videos 1674470.mp4'>
+                        </source>
+                    </video>
+                </div>
                 <p class='video__p'>Video by Ruvim Miksanskiy from Pexels</p>
             </div>
         </div>
     </article>
-
-    <!-- ------------------------------------------------------------    -->
-
     <article class='sect sect-services'>
         <div class='wrapper'>
             <div class='services __services'>
@@ -184,7 +190,6 @@
                     <div class='services-block__img'>
                         <img src='./dist/img/service__arc.png'>
                     </div>
-
                     <p>web development</p>
                     <p>A she'd them bring void moving
                         third she'd kind fill</p>
@@ -193,7 +198,6 @@
                     <div class='services-block__img'>
                         <img src='./dist/img/service__phone.png'>
                     </div>
-
                     <p>app / mobile</p>
                     <p>Dominion man second spirit he,
                         earth they're creeping</p>
@@ -202,7 +206,6 @@
                     <div class='services-block__img'>
                         <img src='./dist/img/service__joy.png'>
                     </div>
-
                     <p>game design</p>
                     <p>Morning his saying moveth it
                         multiply appear life be</p>
@@ -211,7 +214,6 @@
                     <div class='services-block__img'>
                         <img src='./dist/img/service__plane.png'>
                     </div>
-
                     <p>SEO / marketing</p>
                     <p>Give won't after land fill creeping
                         meat you, may</p>
@@ -220,7 +222,6 @@
                     <div class='services-block__img'>
                         <img src='./dist/img/service__star.png'>
                     </div>
-
                     <p>photography</p>
                     <p>Creepeth one seas cattle grass
                         give moving saw give</p>
@@ -229,7 +230,6 @@
                     <div class='services-block__img'>
                         <img src='./dist/img/service__wand.png'>
                     </div>
-
                     <p>graphic design</p>
                     <p>Open, great whales air rule for,
                         fourth life whales</p>
@@ -238,7 +238,6 @@
                     <div class='services-block__img'>
                         <img src='./dist/img/service__bucket.png'>
                     </div>
-
                     <p>illustrations</p>
                     <p>Whales likeness hath, man kind
                         for them air two won't</p>
@@ -246,29 +245,33 @@
             </div>
         </div>
     </article>
-
-    <!-- ----------------------------------------------------------------------- -->
-
     <article class='sect sect-testimonials'>
         <div class='wrapper'>
             <div id='sliders' class='testimonials __testimonials'>
-                <div id='slide' class='testimonials__slide'>
-                    <p>“ Outstanding job and exceeded all expectations. It was a pleasure
-                        to work with them on a sizable first project and am looking
-                        forward to start the next one asap.”</p>
-                    <p>MISHA hOPKINSK</p>
+                <div id='slide' class='fade mySlides testimonials__slide'>
+                    <p>“You can say that you have bad genetics, bad metabolism, and you can just lift your ass off the
+                        couch and start working on yourself, set a goal and believe in yourself. In this case, you will
+                        surely succeed.”</p>
+                    <p>Arnold Schwarzenegger</p>
+                </div>
+                <div id='slide' class='fade mySlides testimonials__slide'>
+                    <p>“When it seems that the whole world is against you, remember that the plane takes off against the
+                        wind!”</p>
+                    <p>Henry Ford</p>
+                </div>
+                <div id='slide' class='fade mySlides testimonials__slide'>
+                    <p>“I’m not afraid of anyone learning 10,000 different hits. I fear one who learns one hit 10,000
+                        times.”</p>
+                    <p>Bruce Lee</p>
                 </div>
                 <div class='testimonials__control'>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
             </div>
         </div>
     </article>
-
-    <!-- ----------------------------------------------------------------------- -->
-
     <article class="sect sect-partners">
         <div class="wrapper">
             <div class="partners">
@@ -280,8 +283,6 @@
             </div>
         </div>
     </article>
-    <!-- ----------------------------------------------------------------------- -->
-
     <article class='sect sect-order'>
         <div class='wrapper'>
             <div class='order __order'>
@@ -289,23 +290,20 @@
                 <p>Let us know what you're looking for in an agency. We'll take a look and see
                     if this could be the start of something beautiful.</p>
                 <div class='order__form'>
-                    <form id='order' method='post' autocomplete='on' action='server.php'>
+                    <form id='order' method='post' autocomplete='on' action="send.php">
                         <input id='user' name='user' type='user' minlength='4' placeholder="Your Name" required>
                         <input id='email' name='email' type='email' placeholder="Your Email" required>
                         <input id='title' name='title' type='text' placeholder="Your Title" required>
-                        <textarea id='user' name='user' type='user' maxlength='240'
+                        <textarea id='text' name='text' type='text' maxlength='240'
                             placeholder="Your Comment"></textarea>
                         <input id='submit' name='submit' type='submit' value="Send message">
                     </form>
                 </div>
             </div>
         </div>
-
-
     </article>
     <footer class='sect-footer'>
         <div class="wrapper">
-
             <div class="footer __footer">
                 <div>
                     <p class="footer__header">
@@ -347,10 +345,10 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </footer>
-    <script src='./dist/scripts/bundle.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="./dist/scripts/build.js"></script>
 </body>
 
 </html>
