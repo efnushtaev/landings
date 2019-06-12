@@ -1,4 +1,4 @@
-# My Сompany Web Site
+# My Сompany Website
 
 ---
 
