@@ -8,5 +8,5 @@
 
 ---
 
-![alt text](https://github.com/efnushtaev/website-2/blob/master/shot.jpg)
+![alt text](https://github.com/efnushtaev/Landings/edit/master/Landing__1/shot.jpg)
 
