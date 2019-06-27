@@ -1,4 +1,4 @@
-# My company
+# My Сompany Website
 
 ---
 
@@ -8,5 +8,5 @@
 
 ---
 
-![alt text](https://github.com/efnushtaev/website-2/blob/master/myCompany.jpg)
+![alt text](https://github.com/efnushtaev/Landings/blob/master/Landing__1/shot.jpg)
 
