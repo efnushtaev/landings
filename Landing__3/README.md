@@ -8,4 +8,4 @@
 
 ---
 
-![alt text(https://github.com/efnushtaev/Landings/blob/master/Landing__3/shot.jpg)]
+![alt text](https://github.com/efnushtaev/Landings/blob/master/Landing__3/shot.jpg)
