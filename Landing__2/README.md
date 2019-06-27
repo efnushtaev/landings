@@ -8,4 +8,4 @@
 
 ---
 
-![alt text](https://github.com/efnushtaev/Website-3__tatoo-salon/blob/master/Tatoo-Salon.jpg)
+![alt text](https://github.com/efnushtaev/Landings/blob/master/Landing__2/shot.jpg)
