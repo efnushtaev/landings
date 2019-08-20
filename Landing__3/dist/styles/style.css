@@ -131,13 +131,13 @@
   .sect-testimonials {
     background: #10c9c3; }
   .sect-header {
-    background: #e9e9e9 url(/../dist/img/bg__banner.png) no-repeat;
+    background: #e9e9e9 url(./../img/bg__banner.png) no-repeat;
     background-size: cover;
     height: auto; }
   .sect-about {
     background: #fff; }
   .sect-scills {
-    background: #e9e9e9 url(/../dist/img/bg__scills.png) no-repeat;
+    background: #e9e9e9 url(./../img/bg__scills.png) no-repeat;
     background-size: cover;
     height: auto; }
   .sect-numbers {
@@ -606,7 +606,8 @@
       flex-direction: column;
       opacity: 0;
       transform-origin: 0% 0%;
-      transition: opacity 0.4s, transform 0.4s; }
+      transition: opacity 0.4s,
+ transform 0.4s; }
       .navig__menu--visible {
         opacity: 1;
         transform: scaleY(1);
