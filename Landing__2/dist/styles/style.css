@@ -567,7 +567,8 @@ footer .footer__logo {
     margin-left: 3%;
     margin-top: 20px; }
   .header__logo {
-    margin-top: 16px; }
+    margin-top: 10px; 
+    margin-left: 10px; }
   .our-works, .our-team, .how-we-doit {
     width: 100%; }
   .how-we-doit__order {
@@ -592,10 +593,10 @@ footer .footer__logo {
     left: -50px; } }
 
 @media screen and (max-width: 670px) {
-  .wrapper {
-    width: 670px; }
+  body {
+    min-width: 670px; }
   .header {
-    width: 670px; }
+    width: 100%; }
   .purchase__consent {
     padding: 30px 30px;
     justify-content: space-around; }
